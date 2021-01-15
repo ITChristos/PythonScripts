@@ -1,0 +1,32 @@
+#Global configuration mode
+hostname <hostname>
+ip domain name <domain name>
+username <username> privilege <0-15> password <password>
+crypto key generate rsa
+    1024
+ip ssh version 2
+
+#Enable ssh on device
+line vty 0 4
+login local
+transport input ssh
+exit
+
+interface gigabitEthernet <number>
+no ip address
+ip address <ip address> <subnet mask>
+no shutdown
+exit
+
+ip route 0.0.0.0 0.0.0.0 172.16.1.1
+do ping 172.16.1.1
+
+#enable netconf on ssh protocol
+netconf ssh
+
+#enable netconf protocol with model driven programmability
+netconf-yang
+
+write mem
+copy running-configuration startup-configuration
+
