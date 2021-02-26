@@ -1,0 +1,55 @@
+
+    #Import the sys module and use the sys.path method to see PATH environmental variables where Python will look for modules
+    import sys
+    sys.path
+
+    #List the methods in a module
+    dir(<module name>)
+
+    #Get help on a module
+    help(<module name>)
+
+from pprint import pprint
+
+import sys
+
+import os
+
+import datetime
+
+import time
+    
+    pip install xmltodict
+import xmltodict
+
+import csv
+
+import json
+    
+    pip instll pyYAML
+import yaml
+
+    pip install pyang
+
+    pip install requests
+import requests
+    
+    pip install ncclient
+from ncclient import manager
+
+    pip install netmiko
+from netmiko import ConnectHandler
+
+    pip install pysnmp
+import pysnmp
+
+    pip install napalm
+import napalm
+
+   pip install nornir
+from nornir.core import InitNornir
+
+import unittest
+    
+    pip install pyats
+#multiple useful modules
